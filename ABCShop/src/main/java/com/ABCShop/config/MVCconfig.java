@@ -74,33 +74,33 @@ public class MVCconfig extends WebMvcConfigurerAdapter {
 //		return HRM;
 //	}
 
-	@Bean("messageSource")
-	public MessageSource messageSource() {
-
-		ReloadableResourceBundleMessageSource bundleMessageSource = new ReloadableResourceBundleMessageSource();
-		//bundleMessageSource.setBasename("classpath:messages");
-		bundleMessageSource.setBasename("classpath:language/messages");
-		bundleMessageSource.setDefaultEncoding("utf-8");
-
-		return bundleMessageSource;
-	}
-	
-	@Bean
-	public LocaleResolver localeResolver() {
-		SessionLocaleResolver lr = new SessionLocaleResolver();
-		lr.setDefaultLocale(new Locale("ja"));
-		return lr;
-	}
-	
-	@Bean
-	public LocaleChangeInterceptor changeInterceptor() {
-		LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
-		lci.setParamName("lang");
-		return lci;
-	}
-	
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(changeInterceptor());
-	}
+//	@Bean("messageSource")
+//	public MessageSource messageSource() {
+//
+//		ReloadableResourceBundleMessageSource bundleMessageSource = new ReloadableResourceBundleMessageSource();
+//		//bundleMessageSource.setBasename("classpath:messages");
+//		bundleMessageSource.setBasename("classpath:language/messages");
+//		bundleMessageSource.setDefaultEncoding("utf-8");
+//
+//		return bundleMessageSource;
+//	}
+//	
+//	@Bean
+//	public LocaleResolver localeResolver() {
+//		SessionLocaleResolver lr = new SessionLocaleResolver();
+//		lr.setDefaultLocale(new Locale("ja"));
+//		return lr;
+//	}
+//	
+//	@Bean
+//	public LocaleChangeInterceptor changeInterceptor() {
+//		LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
+//		lci.setParamName("lang");
+//		return lci;
+//	}
+//	
+//	@Override
+//	public void addInterceptors(InterceptorRegistry registry) {
+//		registry.addInterceptor(changeInterceptor());
+//	}
 }

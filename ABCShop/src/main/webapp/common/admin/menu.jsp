@@ -39,11 +39,39 @@
 				</span>
 			</a>
 				<ul class="treeview-menu">
-					<li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> phân quyền</a></li>
-					<li><a href="index2.html"><i class="fa fa-circle-o"></i>quản lí</a></li>
-					<li><a href="index2.html"><i class="fa fa-circle-o"></i><spring:message code="admin" text="admin" /></a></li>
-					<li><a href="index2.html"><i class="fa fa-circle-o"></i><spring:message code="home" text="home" /></a></li>
-							
+					<li class="active"><a href="index.html"><i
+							class="fa fa-circle-o"></i>
+						<spring:message code="authorize" text="authorize" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="authorize" text="authorize" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="admin" text="admin" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="home" text="home" /></a></li>
+
+				</ul></li>
+
+			<li>
+			<li class=" treeview"><a href="#"> <i class="fa fa-users"></i>
+					<span><spring:message code="account" text="account" /></span> <span
+					class="pull-right-container"> <i
+						class="fa fa-angle-left pull-right"></i>
+				</span>
+			</a>
+				<ul class="treeview-menu">
+					<li><a href="index.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="authorize" text="authorize" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="authorize" text="authorize" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="account.list" text="list" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="account.search" text="search" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="account.delete" text="delete" /></a></li>
+					<li><a href="index2.html"><i class="fa fa-circle-o"></i>
+						<spring:message code="account.delete" text="delete" /></a></li>
+
 				</ul></li>
 
 			<li>
