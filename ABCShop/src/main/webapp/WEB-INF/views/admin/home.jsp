@@ -33,58 +33,83 @@
 		</c:forEach>
 	</tbody>
 </table> --%>
+
 <div class="row">
-	<div class="col-md-1">
-		<button type="button" class="btn btn-default" data-toggle="modal"
-			data-target="#modal-default">Add</button>
+	<div class="col-md-12">
+		<div class="box box-default">
+			<div class="box-header with-border">
+				<i class="fa fa-warning"></i>
+
+				<h3 class="box-title">Alerts</h3>
+			</div>
+
+			<div class="box-body">
+				<div class="row">
+					<div class="col-md-1">
+						<button type="button" class="btn btn-default" data-toggle="modal"
+							data-target="#modal-default">Add</button>
+					</div>
+					<div class="col-md-2">
+						<label for="cars">Choose line in pape:</label> <select name="cars"
+							id="number-line">
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+							<option value="40">40</option>
+						</select>
+					</div>
+					<div class="col-md-2">
+						<label for="cars">Search by:</label> <select name="cars" id="key">
+							<option value="all">all</option>
+							<option value="username">username</option>
+							<option value="email">email</option>
+							<option value="phonenumber">phone number</option>
+							<option value="rule">rule</option>
+						</select>
+					</div>
+					<div class="col-md-2">
+						<label for="cars">Search by:</label> <input type="text"
+							id="txt-search" placeholder="Search by ...">
+					</div>
+					<div class="col-md-1">
+						<input type="button" id="btn-search" value="search">
+					</div>
+				</div>
+
+
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+
+
+				<table class="table">
+					<thead class="thead-light">
+						<tr>
+							<th scope="col">id</th>
+							<th scope="col">username</th>
+							<th scope="col">phonenumber</th>
+							<th scope="col">email</th>
+							<th scope="col">role</th>
+							<th scope="col">tool</th>
+						</tr>
+					</thead>
+					<tbody id="table-data">
+
+					</tbody>
+				</table>
+				<div class="page-navigator" id="phan-trang"></div>
+
+			</div>
+			<!-- /.box-body -->
+		</div>
+		<!-- /.box -->
 	</div>
-	<div class="col-md-2">
-		<label for="cars">Choose line in pape:</label> <select name="cars"
-			id="number-line">
-			<option value="5">5</option>
-			<option value="10">10</option>
-			<option value="20">20</option>
-			<option value="30">30</option>
-			<option value="40">40</option>
-		</select>
-	</div>
-	<div class="col-md-2">
-		<label for="cars">Search by:</label> <select name="cars" id="key">
-			<option value="all">all</option>
-			<option value="username">username</option>
-			<option value="email">email</option>
-			<option value="phonenumber">phone number</option>
-			<option value="rule">rule</option>
-		</select>
-	</div>
-	<div class="col-md-2">
-		<label for="cars">Search by:</label> <input type="text"
-			id="txt-search" placeholder="Search by ...">
-	</div>
-	<div class="col-md-1">
-		<input type="button" id="btn-search" value="search">
-	</div>
+	
 </div>
 
 
 
-
-<table class="table">
-	<thead class="thead-light">
-		<tr>
-			<th scope="col">id</th>
-			<th scope="col">username</th>
-			<th scope="col">phonenumber</th>
-			<th scope="col">email</th>
-			<th scope="col">role</th>
-			<th scope="col">tool</th>
-		</tr>
-	</thead>
-	<tbody id="table-data">
-
-	</tbody>
-</table>
-<div class="page-navigator" id="phan-trang"></div>
 <div class="modal fade in" id="modal-default">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -98,18 +123,18 @@
 			<div class="modal-body">
 				<div class="box-body">
 					<div class="form-group col-md-6">
-						<label for="new-username">username</label> <input
-							type="text" class="form-control" id="new-username"
+						<label for="new-username">username</label> <input type="text"
+							class="form-control" id="new-username"
 							placeholder="tên người dùng">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="new-email">email</label> <input type="text"
-							class="form-control" id="new-email" placeholder="@gmail.com" value="@gmail.com">
+							class="form-control" id="new-email" placeholder="@gmail.com"
+							value="@gmail.com">
 					</div>
 					<div class="form-group col-md-6">
-						<label for="new-password">password</label> <input
-							type="text" class="form-control" id="new-password"
-							placeholder="@gmail.com">
+						<label for="new-password">password</label> <input type="text"
+							class="form-control" id="new-password" placeholder="@gmail.com">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="new-phonenumber">phone number</label> <input
@@ -117,9 +142,8 @@
 							placeholder="số điện thoại liên hệ">
 					</div>
 					<div class="form-group col-md-6">
-						<label for="new-rule">rule</label> 
-						<select
-							name="rule" id="new-rule">
+						<label for="new-rule">rule</label> <select name="rule"
+							id="new-rule">
 							<option value="ADMIN">ADMIN</option>
 							<option value="USER">USER</option>
 							<option value="TEACHER">TEACHER</option>
@@ -127,10 +151,8 @@
 						</select>
 					</div>
 					<div class="form-group col-md-12">
-						<label for=img-new>đường dẫn ảnh</label> 
-						<input
-							type="text" class="form-control" id="img-new"
-							placeholder="đường dẫn ảnh">
+						<label for=img-new>đường dẫn ảnh</label> <input type="text"
+							class="form-control" id="img-new" placeholder="đường dẫn ảnh">
 					</div>
 					<div class="form-group col-md-12">
 						<label for="exampleInputPassword1">chi tiết</label> <input
