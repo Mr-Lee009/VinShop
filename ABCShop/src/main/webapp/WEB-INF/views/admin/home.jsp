@@ -81,8 +81,6 @@
 			</div>
 			<!-- /.box-header -->
 			<div class="box-body">
-
-
 				<table class="table">
 					<thead class="thead-light">
 						<tr>
