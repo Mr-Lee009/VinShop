@@ -1,55 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="dec" uri="http://www.opensymphony.com/sitemesh/decorator"%>
+<%@ taglib prefix="dec"
+	uri="http://www.opensymphony.com/sitemesh/decorator"%>
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>${title}</title>
-	<!-- Tell the browser to be responsive to screen width -->
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<!-- Bootstrap 3.3.7 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>${title}</title>
+<!-- Tell the browser to be responsive to screen width -->
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+<!-- Bootstrap 3.3.7 -->
 
-	<link rel="stylesheet"
-		href="<c:url value='/template/admin/bower_components/bootstrap/dist/css/bootstrap.min.css'/>">
-	<!-- Font Awesome -->
-	<link rel="stylesheet"
-		href="<c:url value='/template/admin/bower_components/font-awesome/css/font-awesome.min.css'/>">
-	<!-- Ionicons -->
-	<link rel="stylesheet" href="<c:url value='/template/admin/bower_components/Ionicons/css/ionicons.min.css'/>">
-	<!-- Theme style -->
-	<link rel="stylesheet" href="<c:url value='/template/admin/dist/css/AdminLTE.min.css'/>">
-	<!-- AdminLTE Skins. Choose a skin from the css/skins
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/bootstrap/dist/css/bootstrap.min.css'/>">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/font-awesome/css/font-awesome.min.css'/>">
+<!-- Ionicons -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/Ionicons/css/ionicons.min.css'/>">
+<!-- Theme style -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/dist/css/AdminLTE.min.css'/>">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-	<link rel="stylesheet" href="<c:url value='/template/admin/dist/css/skins/_all-skins.min.css'/>">
-	<!-- Morris chart -->
-	<link rel="stylesheet" href="<c:url value='/template/admin/bower_components/morris.js/morris.css'/>">
-	<!-- jvectormap -->
-	<link rel="stylesheet" href="<c:url value='/template/admin/bower_components/jvectormap/jquery-jvectormap.css'/>">
-	<!-- Date Picker -->
-	<link rel="stylesheet"
-		href="<c:url value='/template/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'/>">
-	<!-- Daterange picker -->
-	<link rel="stylesheet"
-		href="<c:url value='/template/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css'/>">
-	<!-- bootstrap wysihtml5 - text editor -->
-	<link rel="stylesheet"
-		href="<c:url value='/template/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'/>">
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/dist/css/skins/_all-skins.min.css'/>">
+<!-- Morris chart -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/morris.js/morris.css'/>">
+<!-- jvectormap -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/jvectormap/jquery-jvectormap.css'/>">
+<!-- Date Picker -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'/>">
+<!-- Daterange picker -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css'/>">
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet"
+	href="<c:url value='/template/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'/>">
 
-	<script src="<c:url value='/resources/ckeditor/ckeditor.js'/>"></script>
+<script src="<c:url value='/resources/ckeditor/ckeditor.js'/>"></script>
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-	<!-- Google Font -->
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<!-- Google Font -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -75,6 +83,8 @@
 
 			<!-- Main content -->
 			<section class="content">
+
+				<!-- phan chua noi dung body web -->
 				<dec:body />
 			</section>
 			<!-- /.content -->
@@ -84,7 +94,8 @@
 			<div class="pull-right hidden-xs">
 				<b>Version</b> 2.4.0
 			</div>
-			<strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.
+			<strong>Copyright &copy; 2014-2016 <a
+				href="https://adminlte.io">Almsaeed Studio</a>.
 			</strong> All rights reserved.
 		</footer>
 
@@ -92,8 +103,10 @@
 		<aside class="control-sidebar control-sidebar-dark">
 			<!-- Create the tabs -->
 			<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-				<li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-				<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+				<li><a href="#control-sidebar-home-tab" data-toggle="tab"><i
+						class="fa fa-home"></i></a></li>
+				<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
+						class="fa fa-gears"></i></a></li>
 			</ul>
 			<!-- Tab panes -->
 			<div class="tab-content">
@@ -101,15 +114,17 @@
 				<div class="tab-pane" id="control-sidebar-home-tab">
 					<h3 class="control-sidebar-heading">Recent Activity</h3>
 					<ul class="control-sidebar-menu">
-						<li><a href="javascript:void(0)"> <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+						<li><a href="javascript:void(0)"> <i
+								class="menu-icon fa fa-birthday-cake bg-red"></i>
 
 								<div class="menu-info">
 									<h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
 
 									<p>Will be 23 on April 24th</p>
 								</div>
-							</a></li>
-						<li><a href="javascript:void(0)"> <i class="menu-icon fa fa-user bg-yellow"></i>
+						</a></li>
+						<li><a href="javascript:void(0)"> <i
+								class="menu-icon fa fa-user bg-yellow"></i>
 
 								<div class="menu-info">
 									<h4 class="control-sidebar-subheading">Frodo Updated His
@@ -117,8 +132,9 @@
 
 									<p>New phone +1(800)555-1234</p>
 								</div>
-							</a></li>
-						<li><a href="javascript:void(0)"> <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+						</a></li>
+						<li><a href="javascript:void(0)"> <i
+								class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
 								<div class="menu-info">
 									<h4 class="control-sidebar-subheading">Nora Joined Mailing
@@ -126,8 +142,9 @@
 
 									<p>nora@example.com</p>
 								</div>
-							</a></li>
-						<li><a href="javascript:void(0)"> <i class="menu-icon fa fa-file-code-o bg-green"></i>
+						</a></li>
+						<li><a href="javascript:void(0)"> <i
+								class="menu-icon fa fa-file-code-o bg-green"></i>
 
 								<div class="menu-info">
 									<h4 class="control-sidebar-subheading">Cron Job 254
@@ -135,7 +152,7 @@
 
 									<p>Execution time 5 seconds</p>
 								</div>
-							</a></li>
+						</a></li>
 					</ul>
 					<!-- /.control-sidebar-menu -->
 
@@ -143,40 +160,46 @@
 					<ul class="control-sidebar-menu">
 						<li><a href="javascript:void(0)">
 								<h4 class="control-sidebar-subheading">
-									Custom template/admin Design <span class="label label-danger pull-right">70%</span>
+									Custom template/admin Design <span
+										class="label label-danger pull-right">70%</span>
 								</h4>
 
 								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+									<div class="progress-bar progress-bar-danger"
+										style="width: 70%"></div>
 								</div>
-							</a></li>
+						</a></li>
 						<li><a href="javascript:void(0)">
 								<h4 class="control-sidebar-subheading">
 									Update Resume <span class="label label-success pull-right">95%</span>
 								</h4>
 
 								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-success" style="width: 95%"></div>
+									<div class="progress-bar progress-bar-success"
+										style="width: 95%"></div>
 								</div>
-							</a></li>
+						</a></li>
 						<li><a href="javascript:void(0)">
 								<h4 class="control-sidebar-subheading">
-									Laravel Integration <span class="label label-warning pull-right">50%</span>
+									Laravel Integration <span
+										class="label label-warning pull-right">50%</span>
 								</h4>
 
 								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+									<div class="progress-bar progress-bar-warning"
+										style="width: 50%"></div>
 								</div>
-							</a></li>
+						</a></li>
 						<li><a href="javascript:void(0)">
 								<h4 class="control-sidebar-subheading">
 									Back End Framework <span class="label label-primary pull-right">68%</span>
 								</h4>
 
 								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+									<div class="progress-bar progress-bar-primary"
+										style="width: 68%"></div>
 								</div>
-							</a></li>
+						</a></li>
 					</ul>
 					<!-- /.control-sidebar-menu -->
 
@@ -237,7 +260,7 @@
 						<div class="form-group">
 							<label class="control-sidebar-subheading"> Delete chat
 								history <a href="javascript:void(0)" class="text-red pull-right"><i
-										class="fa fa-trash-o"></i></a>
+									class="fa fa-trash-o"></i></a>
 							</label>
 						</div>
 						<!-- /.form-group -->
@@ -254,43 +277,54 @@
 	<!-- ./wrapper -->
 
 	<!-- jQuery 3 -->
-	<script src="<c:url value='/template/admin/bower_components/jquery/dist/jquery-3.5.1.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/jquery/dist/jquery-3.5.1.min.js'/>"></script>
 	<!-- jQuery UI 1.11.4 -->
-	<script src="<c:url value='/template/admin/bower_components/jquery-ui/jquery-ui.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/jquery-ui/jquery-ui.min.js'/>"></script>
 	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 	<script>
 		$.widget.bridge('uibutton', $.ui.button);
 	</script>
 	<!-- Bootstrap 3.3.7 -->
-	<script src="<c:url value='/template/admin/bower_components/bootstrap/dist/js/bootstrap.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/bootstrap/dist/js/bootstrap.min.js'/>"></script>
 	<!-- Morris.js charts -->
-	<script src="<c:url value='/template/admin/bower_components/raphael/raphael.min.js'/>"></script>
-	<script src="<c:url value='/template/admin/bower_components/morris.js/morris.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/raphael/raphael.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/morris.js/morris.min.js'/>"></script>
 	<!-- Sparkline -->
 	<script
 		src="<c:url value='/template/admin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js'/>"></script>
 	<!-- jvectormap -->
-	<script src="<c:url value='/template/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'/>"></script>
-	<script src="<c:url value='/template/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'/>"></script>
 	<!-- jQuery Knob Chart -->
-	<script src="<c:url value='/template/admin/bower_components/jquery-knob/dist/jquery.knob.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/jquery-knob/dist/jquery.knob.min.js'/>"></script>
 	<!-- daterangepicker -->
-	<script src="<c:url value='/template/admin/bower_components/moment/min/moment.min.js'/>"></script>
 	<script
 		src="<c:url value='/template/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js'/>"></script>
 	<!-- datepicker -->
 	<script
 		src="<c:url value='/template/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'/>"></script>
 	<!-- Bootstrap WYSIHTML5 -->
-	<script src="<c:url value='/template/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'/>"></script>
 	<!-- Slimscroll -->
-	<script src="<c:url value='/template/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js'/>"></script>
 	<!-- FastClick -->
-	<script src="<c:url value='/template/admin/bower_components/fastclick/lib/fastclick.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/bower_components/fastclick/lib/fastclick.js'/>"></script>
 	<!-- AdminLTE App -->
 	<script src="<c:url value='/template/admin/dist/js/adminlte.min.js'/>"></script>
 	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-	<script src="<c:url value='/template/admin/dist/js/pages/dashboard.js'/>"></script>
+	<script
+		src="<c:url value='/template/admin/dist/js/pages/dashboard.js'/>"></script>
 	<!-- AdminLTE for demo purposes -->
 	<script src="<c:url value='/template/admin/dist/js/demo.js'/>"></script>
 </body>

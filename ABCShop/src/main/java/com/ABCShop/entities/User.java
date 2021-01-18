@@ -1,6 +1,7 @@
 package com.ABCShop.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.*;
 
 @Entity(name = "user")
@@ -9,17 +10,38 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date birthday;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="CREATE_BY")
+	private Date createBy;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="CREATE_DATE")
+	private Date createDate;
+
 	private String email;
-	@Column(name = "password")
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="MODIFY_BY")
+	private Date modifyBy;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="MODIFY_DATE")
+	private Date modifyDate;
+
 	private String password;
-	@Column(name = "phonenumber")
+
 	private String phonenumber;
-	@Column(name = "rule")
+
 	private String rule;
-	@Column(name = "username")
+
+	private int status;
+
 	private String username;
 
 	public User() {
@@ -33,12 +55,52 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
+	public Date getBirthday() {
+		return this.birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public Date getCreateBy() {
+		return this.createBy;
+	}
+
+	public void setCreateBy(Date createBy) {
+		this.createBy = createBy;
+	}
+
+	public Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
 	public String getEmail() {
 		return this.email;
 	}
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Date getModifyBy() {
+		return this.modifyBy;
+	}
+
+	public void setModifyBy(Date modifyBy) {
+		this.modifyBy = modifyBy;
+	}
+
+	public Date getModifyDate() {
+		return this.modifyDate;
+	}
+
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 
 	public String getPassword() {
@@ -63,6 +125,14 @@ public class User implements Serializable {
 
 	public void setRule(String rule) {
 		this.rule = rule;
+	}
+
+	public int getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	public String getUsername() {

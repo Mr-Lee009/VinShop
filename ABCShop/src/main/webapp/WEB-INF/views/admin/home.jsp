@@ -10,7 +10,67 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
 
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #2196F3;
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+</style>
 <%-- <table class="table">
 	<thead class="thead-light">
 		<tr>
@@ -89,6 +149,7 @@
 							<th scope="col">phonenumber</th>
 							<th scope="col">email</th>
 							<th scope="col">role</th>
+							<th scope="col">active</th>
 							<th scope="col">tool</th>
 						</tr>
 					</thead>
@@ -103,7 +164,7 @@
 		</div>
 		<!-- /.box -->
 	</div>
-	
+
 </div>
 
 
@@ -148,14 +209,14 @@
 							<option value="SA">SA</option>
 						</select>
 					</div>
-					<div class="form-group col-md-12">
+					<div class="form-group col-md-6">
 						<label for=img-new>đường dẫn ảnh</label> <input type="text"
 							class="form-control" id="img-new" placeholder="đường dẫn ảnh">
 					</div>
-					<div class="form-group col-md-12">
-						<label for="exampleInputPassword1">chi tiết</label> <input
-							type="text" class="form-control" id="detail-new"
-							placeholder="chi tiết">
+					<div class="form-group col-md-6">
+						<label for="exampleInputPassword1">Trạng thái</label><label
+							class="switch"> <input type="checkbox" checked="">
+							<span class="slider round"></span></label>
 					</div>
 				</div>
 			</div>
@@ -219,8 +280,11 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
-<script language="javascript"
-	src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+
+<script>
+	CKEDITOR.replace("detail-new");
+	CKEDITOR.replace("detail-edit");
+</script>
 <script>
 		var list = null;
 		var page = 1;
@@ -236,12 +300,14 @@
 					success : function (result){
 						$("#table-data").empty();
 						result.list.forEach(element=> {
+							
 						var item = "<tr>"
 							+ '<td scope="row">' + element.id + '</td>'
 							+ '<td>' + element.username + '</td>'
 							+ '<td><b>' + element.phonenumber + ' VND</b></td>'
 							+ '<td>'+ element.email +'</td>'							
 							+ '<td>'+ (element.rule=="ADMIN"?"<b>"+element.rule+"</b>": element.rule) + '</td>'
+							+ '<td><label class="switch"> <input type="checkbox"'+(element.status===1?'checked':'')+'> <span class="slider round"></span></label></td>'
 							+ '<th scope="col">'
 							+ '<button class="btn btn-danger btn-sm"onclick="deleteData('+ element.id +')">'
 							+ '<i class="fa fa-trash" aria-hidden="true"></i>'
