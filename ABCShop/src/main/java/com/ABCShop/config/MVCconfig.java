@@ -35,6 +35,7 @@ public class MVCconfig extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/DATA/**").addResourceLocations("/resources/");
 		registry.addResourceHandler("/template/**").addResourceLocations("/template/");
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+		registry.addResourceHandler("/uploads/**").addResourceLocations("/uploads/");
 	}
 	
 //	@Bean(value = "GetDataSource")
