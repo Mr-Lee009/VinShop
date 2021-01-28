@@ -2,6 +2,7 @@ package com.ABCShop.util;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtil {
@@ -29,16 +30,40 @@ public class DateUtil {
 		}
 		return "";
 	}
-	
+
 	/**
+	 * @param value Date
+	 * @return Timestamp
+	 */
+	public static Timestamp date2Timestamp(Date value) {
+		if (value != null) {
+			return new Timestamp(value.getTime());
+		}
+		return null;
+	}
+	
+	 /**
     *
-    * @param value Date
-    * @return Timestamp
+    * @param date Date
+    * @param day integer
+    * @return Date
     */
-   public static Timestamp date2Timestamp(Date value) {
-       if (value != null) {
-           return new Timestamp(value.getTime());
-       }
-       return null;
+   public static Date nextdate(Date date, int day) {
+       Calendar calendar = Calendar.getInstance();
+       calendar.setTime(date);
+       calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+               calendar.get(Calendar.DATE) + day, 0, // hour
+               0, // min
+               0); // sec
+       /**
+        * clear millisecond field
+        */
+       calendar.clear(Calendar.MILLISECOND);
+       return calendar.getTime();
+   }
+   public static void main(String[] args) {
+	
+	   Date date = nextdate(new Date(),7);
+	   System.out.println(date);
    }
 }
