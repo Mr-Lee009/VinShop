@@ -66,7 +66,7 @@ public class HomeAPI {
 		}
 	}
 
-	// code moi
+	// code moi hihi
 	@RequestMapping(value = "/home/user/{id}", method = RequestMethod.GET)
 	public Message<User> getUser(@PathVariable("id") int id) {
 		Message<User> msg = new Message<User>();
