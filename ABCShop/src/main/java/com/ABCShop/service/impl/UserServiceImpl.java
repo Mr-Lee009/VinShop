@@ -25,18 +25,18 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean delete(int id) {
 		// TODO Auto-generated method stub
-		return false;
+		return userDAO.delete(id);
 	}
 
 	@Override
 	public boolean update(User user) {
 		// TODO Auto-generated method stub
-		return false;
+		return userDAO.update(user);
 	}
 
 	@Override
-	public List<User> getAll() {
-		return userDAO.getAll();
+	public User getById(int id) {
+		return userDAO.getById(id);
 	}
 
 	@Override

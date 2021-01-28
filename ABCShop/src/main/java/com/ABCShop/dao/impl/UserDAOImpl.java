@@ -43,8 +43,21 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public boolean delete(int id) {
-		// TODO Auto-generated method stub
-		return false;
+		Session session = factory.openSession();
+		Transaction tran = null;
+		try {
+			tran = session.beginTransaction();
+			User user = getById(id);
+			session.delete(user);
+			tran.commit();
+			return true;
+		} catch (HibernateException mye) {
+			tran.rollback();
+			mye.printStackTrace();
+			return false;
+		} finally {
+			session.close();
+		}
 	}
 
 	@Override
@@ -62,27 +75,6 @@ public class UserDAOImpl implements UserDAO {
 		} finally {
 			session.close();
 		}
-	}
-
-	@Override
-	public List<User> getAll() {
-		Session session = factory.openSession();
-		Transaction tran = null;
-		try {
-			tran = session.beginTransaction();
-			Criteria ctr = session.createCriteria(User.class);
-			ctr.setFirstResult(10);
-			ctr.setMaxResults(20);
-			List<User> lst = (List<User>) ctr.list();
-			tran.commit();
-			return lst;
-		} catch (HibernateException mye) {
-			System.out.println(mye.getMessage());
-			return null;
-		} finally {
-			session.close();
-		}
-
 	}
 
 	@Override
@@ -148,6 +140,24 @@ public class UserDAOImpl implements UserDAO {
 			session.close();
 		}
 
+	}
+
+	@Override
+	public User getById(int id) {
+		Session session = factory.openSession();
+		Transaction tran = null;
+		try {
+			tran = session.beginTransaction();
+			User user = (User) session.get(User.class, id);
+			tran.commit();
+			return user;
+		} catch (HibernateException mye) {
+			tran.rollback();
+			mye.printStackTrace();
+			return null;
+		} finally {
+			session.close();
+		}
 	}
 
 }

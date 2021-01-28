@@ -21,8 +21,6 @@ public class HomeController {
 	
 	@RequestMapping(value = "/home",method = RequestMethod.GET)
 	public ModelAndView home(HttpServletRequest request ) {
-		List<User> lst = userService.getAll();
-		request.setAttribute("listUser", lst);
 		return new ModelAndView("web/home");
 	}
 }
