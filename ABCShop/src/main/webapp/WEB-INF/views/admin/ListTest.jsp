@@ -4,28 +4,6 @@
 <%@ taglib prefix="dec"
 	uri="http://www.opensymphony.com/sitemesh/decorator"%>
 	
-	<%-- <table class="table">
-	<thead class="thead-light">
-		<tr>
-			<th scope="col">id</th>
-			<th scope="col">username</th>
-			<th scope="col">phonenumber</th>
-			<th scope="col">email</th>
-			<th scope="col">tool</th>
-		</tr>
-	</thead>
-	<tbody id="table-data">
-		<c:forEach var="item" items="${listUser}">
-			<tr>
-				<td>${item.id}</td>
-				<td>${item.username}</td>
-				<td>${item.phonenumber}</td>
-				<td>${item.rule}</td>
-				<td>tool</td>
-			</tr>
-		</c:forEach>
-	</tbody>
-</table> --%>
 <div class="row">
 	<div class="col-md-12">
 		<!-- Custom Tabs -->

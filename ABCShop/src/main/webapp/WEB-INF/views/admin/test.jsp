@@ -4,12 +4,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">alert("Ahihi")</script>
+
 
 
 <div class="row">
@@ -68,6 +65,8 @@
 	</tbody>
 </table>
 <div class="page-navigator" id="phan-trang"></div>
+
+
 <div class="modal fade in" id="modal-default">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -129,10 +128,7 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
-
 <!-- Modan edit -->
-
-
 <div class="modal fade in" id="modal-edit">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -185,7 +181,11 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
+
+
 <script language="javascript"
+
+
 	src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
 <script>
 		var list = null;
